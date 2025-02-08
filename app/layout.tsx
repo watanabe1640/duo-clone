@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Nunito } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
+
+const nunito = Nunito({ subsets: ["latin"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+  <>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${nunito.style}${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
+  </>
   );
 }
