@@ -18,7 +18,7 @@ export default function LearnPage() {
 					</UserProgress>
 				</StickyWrapper>
 				<FeedWrapper>
-					<Header title="title"/>
+					<Header title="Japanese"/>
 				</FeedWrapper>
 			</div>
 		</>
