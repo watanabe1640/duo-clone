@@ -20,10 +20,13 @@ export default async function LearnPage() {
 			<div className="flex flex-row-reverse gap-[48px] px-6">
 				<StickyWrapper>
 					<UserProgress
-						activeCourse={{ title: userProgress.activeCourse.title, imageSrc:userProgress.activeCourse.imageSrc }}
+						activeCourse={{ 
+							id: userProgress.activeCourse.id,
+							title: userProgress.activeCourse.title, imageSrc:userProgress.activeCourse.imageSrc 
+						}}
 						hearts={userProgress.hearts}
 						points={userProgress.points}
-						hasActiveSubscription={true}
+						hasActiveSubscription={false}
 					>
 					</UserProgress>
 				</StickyWrapper>
