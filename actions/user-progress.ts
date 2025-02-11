@@ -6,7 +6,7 @@ import db from "@/db/drizzle";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-export async function upsertuserProgress(courseId: number) {
+export async function upsertUserProgress(courseId: number) {
 	const { userId } = await auth();
 	const user = await currentUser();
 
