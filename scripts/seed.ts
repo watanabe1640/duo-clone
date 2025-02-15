@@ -109,7 +109,21 @@ const main = async () => {
 				type: "SELECT",
 				question: "Which of these is a 'はねる'?",
 				order: 2,
-			}
+			},
+			{
+				id: 5,
+				lessonsId: 3, //Verbs
+				type: "SELECT",
+				question: "Which of these is a 'はしる'?",
+				order: 1,
+			},
+			{
+				id: 6,
+				lessonsId: 3, //Verbs
+				type: "SELECT",
+				question: "Which of these is a 'はねる'?",
+				order: 2,
+			},
 		]);
 
 		await db.insert(schema.challengeOptions).values([
@@ -160,7 +174,19 @@ const main = async () => {
 				challengeId: 4,
 				text: "sit",
 				correct: false,
-			}
+			},
+			{
+				id: 9,
+				challengeId: 5,
+				text: "jump",
+				correct: true,
+			},
+			{
+				id: 10,
+				challengeId: 5,
+				text: "sit",
+				correct: false,
+			},
 		])
 
 		console.log("seeding finished");
