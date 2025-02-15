@@ -61,6 +61,24 @@ const main = async () => {
 				title: "Verbs",
 				order: 2,
 			},
+			{
+				id: 3,
+				unitId: 1, //"Learn the basics of Japanese"
+				title: "Verbs",
+				order: 3,
+			},
+			{
+				id: 4,
+				unitId: 1, //"Learn the basics of Japanese"
+				title: "Verbs",
+				order: 4,
+			},
+			{
+				id: 5,
+				unitId: 1, //"Learn the basics of Japanese"
+				title: "Verbs",
+				order: 5,
+			},
 		]);
 		
 		await db.insert(schema.challenges).values([
